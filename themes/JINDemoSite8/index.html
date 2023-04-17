@@ -1440,7 +1440,7 @@
                         <div class="widgettitle ef">近期文章</div>
                         <ul>
                             {{ #widgetRecentlyList }}
-                                <li><a href='{{ &url }}'>{{ &title }}</a></li>
+                                <li><a href="{{ &url }}">{{ &title }}</a></li>
                             {{ /widgetRecentlyList }}
                         </ul>
                     </div>
@@ -1449,7 +1449,7 @@
                         <div class="widgettitle ef">分类目录</div>
                         <ul>
                             {{ #widgetCategoryList }}
-                                <li><a href='/category/{{&.}}'>{{&.}}</a></li>
+                                <li><a href="/category/{{&.}}">{{&.}}</a></li>
                             {{ /widgetCategoryList }}
                         </ul>
                     </div>
@@ -1458,7 +1458,7 @@
                         <ul>
                                 <li><a href="/admin/" target="_blank">管理站点</a></li>
                             {{ #widgetLinkList }}
-                                <li><a href='{{ &url }}' target="_blank">{{ &title }}</a></li>
+                                <li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
                             {{ /widgetLinkList }}
                         </ul>
                     </div>
