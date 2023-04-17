@@ -1299,28 +1299,12 @@
                     <div id="drawernav4" class="ef">
                         <nav class="fixed-content">
                             <ul class="menu-box">
-                                <li
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4622">
-                                    <a href="https://jin-demo.jp/demo-8" aria-current="page">Home</a>
-                                </li>
-                                <li
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4623">
-                                    <a href="https://jin-demo.jp/demo-8" aria-current="page">Profile</a>
-                                </li>
-                                <li
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4624">
-                                    <a href="https://jin-demo.jp/demo-8" aria-current="page">Service</a>
-                                </li>
-                                <li
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4625">
-                                    <a href="https://jin-demo.jp/demo-8" aria-current="page"><span><i
-                                                class="fa-comments-o" aria-hidden="true"></i></span>Review</a>
-                                </li>
-                                <li
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4626">
-                                    <a href="https://jin-demo.jp/demo-8" aria-current="page"><span><i
-                                                class="fa-envelope-o" aria-hidden="true"></i></span>Contact</a>
-                                </li>
+                                {{ #widgetMenuList }}
+                                    <li
+                                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+                                        <a href="{{ &url }}" aria-current="page">{{ &title }}</a>
+                                    </li>
+                                {{ /widgetMenuList }}
                             </ul>
                         </nav>
                     </div>
