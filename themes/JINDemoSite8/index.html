@@ -1335,9 +1335,8 @@
                 <a href="https://jin-theme.com/demo-8"><img
                         src="https://jin-demo.jp/demo-8/wp-content/uploads/2019/03/topimage6-1-1.png" /></a>
                 <div class="top-image-meta">
-                    <div class="main-image-text ef animate top-image-text-option-shadow">JIN Demo Site 8</div>
-                    <div class="main-image-text-sub ef animate top-image-subtext-option-shadow"> My Natural Garden &
-                        Cafe</div>
+                    <div class="main-image-text ef animate top-image-text-option-shadow">{{ &OPT.siteName }}</div>
+                    <div class="main-image-text-sub ef animate top-image-subtext-option-shadow">{{ &OPT.siteDescription }}</div>
                 </div>
             </div> <!--ヘッダー画像-->
             <!--ヘッダー-->
@@ -1437,29 +1436,34 @@
                             </style>
                         </div>
                     </div>
-                    <div id="archives-2" class="widget widget_archive">
-                        <div class="widgettitle ef">アーカイブ</div>
+                    <div class="widget">
+                        <div class="widgettitle ef">近期文章</div>
                         <ul>
-                            <li><a href='https://jin-demo.jp/demo-8/?m=201802'>2018年2月</a></li>
-                            <li><a href='https://jin-demo.jp/demo-8/?m=201801'>2018年1月</a></li>
-                            <li><a href='https://jin-demo.jp/demo-8/?m=201712'>2017年12月</a></li>
+                            {{ #widgetRecentlyList }}
+                                <li><a href='{{ &url }}'>{{ &title }}</a></li>
+                            {{ /widgetRecentlyList }}
                         </ul>
                     </div>
-                    <div id="categories-2" class="widget widget_categories">
-                        <div class="widgettitle ef">カテゴリー</div>
+                    </div>
+                    <div class="widget">
+                        <div class="widgettitle ef">分类目录</div>
                         <ul>
-                            <li class="cat-item cat-item-3"><a href="https://jin-demo.jp/demo-8/?cat=3">JINのエディタ</a>
-                            </li>
-                            <li class="cat-item cat-item-4"><a href="https://jin-demo.jp/demo-8/?cat=4">JINのデザイン</a>
-                            </li>
-                            <li class="cat-item cat-item-5"><a href="https://jin-demo.jp/demo-8/?cat=5">JINの特徴</a>
-                            </li>
-                            <li class="cat-item cat-item-9"><a href="https://jin-demo.jp/demo-8/?cat=9">収益化機能</a>
-                            </li>
+                            {{ #widgetCategoryList }}
+                                <li><a href='/category/{{&.}}'>{{&.}}</a></li>
+                            {{ /widgetCategoryList }}
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <div class="widgettitle ef">链接</div>
+                        <ul>
+                                <li><a href="/admin/" target="_blank">管理站点</a></li>
+                            {{ #widgetLinkList }}
+                                <li><a href='{{ &url }}' target="_blank">{{ &title }}</a></li>
+                            {{ /widgetLinkList }}
                         </ul>
                     </div>
                     <div id="tag_cloud-3" class="widget widget_tag_cloud">
-                        <div class="widgettitle ef">タグ</div>
+                        <div class="widgettitle ef">标签云</div>
                         <div class="tagcloud">
                             {{ #widgetCategoryList }}
                             <a href="/category/{{&.}}" class="tag-cloud-link" style="font-size: 11.876923076923pt;"
