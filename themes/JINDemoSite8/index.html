@@ -13,11 +13,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- ここからOGP -->
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="JIN Demo Site 8｜Just another WordPress site">
-    <meta property="og:url" content="https://jin-demo.jp/demo-8">
+    <meta property="og:title" content="{{ &OPT.siteName }}｜{{ &OPT.siteDescription }}">
+    <meta property="og:url" content="{{ &OPT.siteDomain }}">
     <meta property="og:description" content="">
     <meta property="og:image" content="https://jin-demo.jp/demo-8/wp-content/uploads/2019/03/topimage6-1-1.png">
-    <meta property="og:site_name" content="JIN Demo Site 8">
+    <meta property="og:site_name" content="{{ &OPT.siteName }}">
     <meta property="fb:admins" content="">
     <meta name="twitter:card" content="summary">
     <!-- ここまでOGP -->
@@ -27,10 +27,6 @@
     <link rel='dns-prefetch' href='//ajax.googleapis.com' />
     <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
     <link rel='dns-prefetch' href='//use.fontawesome.com' />
-    <link rel="alternate" type="application/rss+xml" title="JIN Demo Site 8 &raquo; フィード"
-        href="https://jin-demo.jp/demo-8/?feed=rss2" />
-    <link rel="alternate" type="application/rss+xml" title="JIN Demo Site 8 &raquo; コメントフィード"
-        href="https://jin-demo.jp/demo-8/?feed=comments-rss2" />
     <link rel='stylesheet' id='wp-block-library-css'
         href='https://jsd.onmicrosoft.cn/gh/wrisin/cloudflare-workers-blog/themes/JINDemoSite8/style.min.css?ver=6.2' type='text/css'
         media='all' />
@@ -383,11 +379,10 @@
     <link rel='stylesheet' id='swiper-style-css'
         href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css?ver=6.2' type='text/css'
         media='all' />
-    <link rel="https://api.w.org/" href="https://jin-demo.jp/demo-8/index.php?rest_route=/" />
     <style type="text/css">
         #wrapper {
             background-color: #f2f6f9;
-            background-image: url(https://jin-demo.jp/demo-8/wp-content/uploads/2019/03/seamless_8-1-1.png);
+            background-image: url(https://jsd.onmicrosoft.cn/gh/wrisin/cloudflare-workers-blog/themes/JINDemoSite8/seamless_8-1-1.png);
         }
 
         .related-entry-headline-text span:before,
@@ -1017,7 +1012,7 @@
         .concept-box5:before,
         .concept-box6:before {
             background-color: #f2f6f9;
-            background-image: url(https://jin-demo.jp/demo-8/wp-content/uploads/2019/03/seamless_8-1-1.png);
+            background-image: url(https://jsd.onmicrosoft.cn/gh/wrisin/cloudflare-workers-blog/themes/JINDemoSite8/seamless_8-1-1.png);
         }
 
         .concept-box1:after,
@@ -1027,7 +1022,7 @@
         .concept-box5:after,
         .concept-box6:after {
             border-color: #f2f6f9;
-            border-image: url(https://jin-demo.jp/demo-8/wp-content/uploads/2019/03/seamless_8-1-1.png) 27 23 / 50px 30px / 1rem round space0 / 5px 5px;
+            border-image: url(https://jsd.onmicrosoft.cn/gh/wrisin/cloudflare-workers-blog/themes/JINDemoSite8/seamless_8-1-1.png) 27 23 / 50px 30px / 1rem round space0 / 5px 5px;
         }
 
         .jin-ac-box01-title::after {
@@ -1265,7 +1260,9 @@
             font-size: 13px !important;
         }
     </style>
-    <link rel="next" href="https://jin-demo.jp/demo-8/?paged=2" />
+    {{ #pageOlder }}
+    <link rel="next" href="{{ &url }}" />
+    {{ /pageOlder }}
     <style type="text/css" id="wp-custom-css">
         .proflink {
             text-align: center;
@@ -1405,7 +1402,7 @@
                             <div class="myjob">WordPress Template</div>
                             <div class="myname">JIN</div>
                             <div class="my-profile-thumb">
-                                <a href="https://jin-demo.jp/demo-8/?p=4623"><img
+                                <a href="#"><img
                                         src="https://jin-demo.jp/demo-8/wp-content/uploads/2018/02/shutterstock_795651727-150x150.jpg"
                                         alt="" width="110" height="110" /></a>
                             </div>
